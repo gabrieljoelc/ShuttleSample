@@ -1,0 +1,15 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Articles";
+}
+
+<h2>Article Commands</h2>
+
+<p>@ViewBag.Message</p>
+
+@using (Html.BeginForm("SendArticleToEditor", "Article"))
+{
+    <textarea id="article" name="article"></textarea>
+    <button>Send Article To Editor</button>
+}
